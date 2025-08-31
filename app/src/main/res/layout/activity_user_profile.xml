@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <!-- Banner at top -->
+    <RelativeLayout
+        android:id="@+id/userProfileBanner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/teal_700"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/bannerBuzzLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BuzzLink"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/grey_500"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Profile info -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="92dp"
+            android:layout_height="85dp"
+            android:src="@drawable/ic_profile"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/profileBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="start" />
+
+            <TextView
+                android:id="@+id/bioText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#555555"
+                android:textSize="16sp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Follow Button -->
+    <Button
+        android:id="@+id/btnFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/postsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posts: 0"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="User's Posts"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp" />
+
+    <!-- User posts list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userPostRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"/>
+
+</LinearLayout>
